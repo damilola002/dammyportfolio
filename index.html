@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css">
+    <title>DAMILOLA'S PROFESSIONAL PORTFOLIO</title>
+</head>
+<body>
+    <img src="https://optimise2.assets-servd.host/maniacal-finch/production/animals/african-lion-01-01.jpg?w=1200&auto=compress%2Cformat&fit=crop&dm=1658933674&s=4b63f926a0f524f2087a8e0613282bdb">
+    <h2>ADESINA DAMILOLA SAMUEL</h2> <br>
+    <p>I'm a developing computer scientist. Good at the computer desk, have good communication aand thinking skill.</p>
+    <p>I'm also a minor in mathematics and enginerring. I have a vision which is to make my life and other perople lives better</p>
+<input text=""  id="message"placeholder="Reach out to me">
+<button onclick="sendMessage()">Send</button>
+    <script>
+        // Create a new WebSocket connection
+    const socket = new WebSocket('ws://localhost:8080');
+    
+    // When the connection is opened
+    socket.addEventListener('open', event => {
+      console.log('Connection opened!');
+      
+      // Send a message to the server
+      socket.send('Hello server!');
+    });
+    
+    // When a message is received from the server
+    socket.addEventListener('message', event => {
+      console.log(`Received message: ${event.data}`);
+    });
+    // script.js
+function sendMessage() {
+  const message = document.getElementById('message').value;
+  alert(`Received message: ${message}`);
+}
+// Prompt user for message
+let message = prompt("Enter your message:");
+
+// Display message in a pop-up window
+alert("You said: " + message);
+
+
+    </script>
+    
+
+</body>
+</html>
